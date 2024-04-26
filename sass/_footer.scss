@@ -1,0 +1,57 @@
+@use 'mixing' as *;
+
+footer{
+    background-color: hsla(233, 100%, 69%, .1);
+    width: 100%;
+
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-block: 2rem;
+        gap: 30px;
+        text-align: center;
+
+        & > img{
+            width: 50px;
+        }
+
+        ul{
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            a{
+                text-decoration: none;
+                font-weight: 500;
+            }
+        }
+
+        &__media{
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+
+        @include display-medium{
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin-inline: auto ;
+
+            ul{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                text-align: left;
+            }
+        }
+    }
+}
+

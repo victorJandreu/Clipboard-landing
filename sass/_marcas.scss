@@ -1,0 +1,17 @@
+@use 'mixing' as *;
+
+.marcas{
+    margin: 3rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+
+    @include display-medium{
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+        max-width: 1200px;
+    }
+}

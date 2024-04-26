@@ -1,0 +1,38 @@
+
+@use 'mixing' as *;
+header{
+    text-align: center;
+    background-image: url("../images/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100% 280px;
+
+    & img{
+        margin-top: 3.5rem;
+    }
+
+    & .header-text{
+        & h1{
+            font-size: 1.8em;
+            margin-top: 3rem;
+        }
+    }
+    @include display-medium{
+        background-image: url("../images/bg-header-desktop.png");
+        background-size: 100%;
+        width: 100%;
+
+        & .container{
+            max-width: 630px;
+            margin-top: 5rem;
+
+            & img{
+                width: 100px;
+            }
+            & .btnContainer{
+                flex-direction: row;
+            }
+        }
+    }
+ 
+}
+
